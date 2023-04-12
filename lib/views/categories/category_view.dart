@@ -31,12 +31,15 @@ class _CategoryViewState extends State<CategoryView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Что на странице Контантина кажется вам недопустимым?",
-                style: GoogleFonts.nunito(
-                    color: AppColors.textColor36,
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w600),
+              Padding(
+                padding: EdgeInsets.only(left: 12.0.w),
+                child: Text(
+                  "Что на странице Контантина кажется вам недопустимым?",
+                  style: GoogleFonts.nunito(
+                      color: AppColors.textColor36,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w600),
+                ),
               ),
               ...List.generate(
                 categories.length,

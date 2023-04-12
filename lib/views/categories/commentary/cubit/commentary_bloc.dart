@@ -18,7 +18,7 @@ class CommentaryBloc extends Cubit<CommentaryState> {
         },
       ),
     );
-    print(response.data);
+    debugPrint(response.data);
     if ((response.statusCode ?? 0) > 199 && (response.statusCode ?? 0) < 400) {
       emit(
         CommentarySuccessState(),

@@ -17,6 +17,7 @@ class _CommentaryViewState extends State<CommentaryView> {
     return BlocProvider(
       create: (context) => CommentaryBloc(),
       child: Scaffold(
+        backgroundColor: AppColors.white,
         appBar: CustomAppBar(
           onTap: () {
             Navigator.pop(context);
@@ -57,6 +58,7 @@ class _CommentaryViewState extends State<CommentaryView> {
                     ),
                     SizedBox(height: 8.h),
                     TextFormField(
+                      cursorHeight: 22.h,
                       maxLines: 5,
                       minLines: 2,
                       controller: controller,
