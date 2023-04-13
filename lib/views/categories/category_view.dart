@@ -43,7 +43,7 @@ class _CategoryViewState extends State<CategoryView> {
               ),
               ...List.generate(
                 categories.length,
-                (index) => ListTile(
+                (index) => GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(
                       context,
@@ -51,12 +51,17 @@ class _CategoryViewState extends State<CategoryView> {
                       arguments: categories[index],
                     );
                   },
-                  title: Text(
-                    categories[index],
-                    style: GoogleFonts.nunito(
-                        color: AppColors.textColor36,
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w600),
+                  child: Container(
+                    margin: EdgeInsets.only(left: 12.w, top: 12.h),
+                    height: 20,
+                    width: double.infinity,
+                    child: Text(
+                      categories[index],
+                      style: GoogleFonts.nunito(
+                          color: AppColors.textColor36,
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w600),
+                    ),
                   ),
                 ),
               ),

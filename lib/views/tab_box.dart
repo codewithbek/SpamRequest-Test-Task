@@ -26,7 +26,7 @@ class _TabScreenState extends State<TabScreen> {
         children: _screens,
       ),
       bottomNavigationBar: SizedBox(
-        height: 50.h,
+        height: 70.h,
         child: BottomNavigationBar(
           showSelectedLabels: false,
           showUnselectedLabels: false,
